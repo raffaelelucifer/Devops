@@ -1,0 +1,13 @@
+hostinfo:
+         net : ['192.168.37']
+         ports : ['61318', '22']
+         ssh_key : "/home/raffaele/.ssh/id_rsa"
+         cmdlist : ["hostname",
+                    "cat /etc/issue |grep [0-9] || cat /etc/redhat-release |grep [0-9]",
+                    "cat /sys/class/net/[^vftlsdb]*/address || esxcfg-vmknic -l|awk '{print $8}'|grep ':'",
+                    "sudo dmidecode -s system-serial-number",
+                    "sudo dmidecode -s system-manufacturer",
+                    "sudo dmidecode -s system-product-name"]
+         email_list : ["1625504587@qq.com"]
+
+
